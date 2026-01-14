@@ -1,9 +1,12 @@
+import ExpenseDate from './ExpenseDate.jsx'
 import './ExpenseItem.css'
 
 function ExpenseItem(props){
+    
     return (
+        <>
         <div className='expense-item'>
-            <div>{props.data.date.toString()}</div>
+            <ExpenseDate data={props.data.date}/>
             <div className='expense-item__description'>
                 <h2>{props.data.title}</h2>
                 <div className='expense-item__price'>
@@ -11,6 +14,7 @@ function ExpenseItem(props){
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
