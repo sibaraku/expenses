@@ -1,13 +1,15 @@
-import ExpenseItem from './components/ExpenseItem.jsx';
+import Expenses from './components/Expenses.jsx';
 
 function App() {
   const expenses = [
     {
+      id: '1',
       date: new Date(2024, 10, 12),
       title: 'New book',
       price: 30.99
     },
     {
+      id: '2',
       date: new Date(2024, 10, 12),
       title: 'New jeans',
       price: 99.99
@@ -16,8 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <ExpenseItem data={expenses[0]} />
-      <ExpenseItem data={expenses[1]} />
+      <Expenses data={expenses} />
     </div>
   );
 }
